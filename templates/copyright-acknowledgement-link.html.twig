@@ -1,17 +1,18 @@
-<div id="download-modal-link">{% block link %}Download: {{ label }} {% endblock %}</div>
+<div id="download-modal-link">{% block modal_link %}{{ label }}{% endblock %}</div>
 <div id='copyright-acknowledgement'>
   <div id='copyright-acknowledgement-text' class='modal-content'>
     <span id="copyright-acknowledgement-close-button" class="close">&times;</span>
     {% block agreement %}
     <h3>Copyright &amp; Fair-use Agreement</h3>
-    <p>UNLV Special Collections provides copies of materials to facilitate private study, scholarship, or research. We welcome you to use materials in our collections that are in the <a href="https://copyright.cornell.edu/publicdomain">public domain</a> and to make <a href="https://www.copyright.gov/fls/fl102.html">fair use</a> of copyrighted materials as defined by <a href="https://www.copyright.gov/title17/">copyright law</a>. Please <a href="http://library.unlv.edu/speccol/research_and_services/citing">cite us</a>.</p>
-    <blockquote class="wp-block-quote"><p>The copyright law of the United States (<a href="https://www.copyright.gov/title17/">Title 17 United States Code) </a>governs the making of reproductions of copyrighted material. Under certain conditions specified in the law, libraries and archives are authorized to furnish a reproduction. One of these specified conditions is that the reproduction is not to be “used for any purpose other than private study, scholarship, or research.” If a researcher uses a reproduction for purposes in excess of “<a href="https://www.copyright.gov/fls/fl102.html">fair use</a>,” that researcher may be liable for copyright infringement.</p></blockquote>
+    <p>UNLV Special Collections provides copies of materials to facilitate private study, scholarship, or research. Material not in the <a href="https://copyright.cornell.edu/publicdomain">public domain</a> may be used according to <a href="https://www.copyright.gov/fls/fl102.html">fair use</a> of <em>copyrighted materials</em> as defined by <a href="https://www.copyright.gov/title17/">copyright law</a>. Please <a href="http://library.unlv.edu/speccol/research_and_services/citing">cite us</a>.</p>
+    <p>Please note that UNLV may not own the copyright to these materials and cannot provide permission to publish or distribute materials when UNLV is not the copyright holder. <em>The user is <strong>solely responsible</strong> for determining the copyright status of materials and obtaining permission to use material from the copyright holder and for determining whether any <a href="https://www.copyright.gov/circs/m10.pdf">permissions</a> relating to any other rights are necessary for the intended use, and for obtaining all required permissions beyond that allowed by fair use.</em></p>
+    <p>Our reproduction and use policy can be found <a href="https://www.library.unlv.edu/speccol/research_and_services/reproductions">on our website</a>.</p>
   {% endblock %}
   {% block form %}
   <form id="copyright-acknowledgement-form" method="get" action="{{ url }}" target="_blank">
     {% if checkbox %}
     <input name="copyright-acknowledgement" type="checkbox" value="agreed" required>
-    <label for="copyright-acknowledgement">I acknowledge the above statement about the fair use of these materials.</label>
+    <label for="copyright-acknowledgement">I agree</label>
     {% endif %}
     <button type="submit">Download</button>
   </form>
