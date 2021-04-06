@@ -1,0 +1,20 @@
+<div id="download-modal-link">{% block link %}Download: {{ label }} {% endblock %}</div>
+<div id='copyright-acknowledgement'>
+  <div id='copyright-acknowledgement-text' class='modal-content'>
+    <span id="copyright-acknowledgement-close-button" class="close">&times;</span>
+    {% block agreement %}
+    <h3>Copyright &amp; Fair-use Agreement</h3>
+    <p>UNLV Special Collections provides copies of materials to facilitate private study, scholarship, or research. We welcome you to use materials in our collections that are in the <a href="https://copyright.cornell.edu/publicdomain">public domain</a> and to make <a href="https://www.copyright.gov/fls/fl102.html">fair use</a> of copyrighted materials as defined by <a href="https://www.copyright.gov/title17/">copyright law</a>. Please <a href="http://library.unlv.edu/speccol/research_and_services/citing">cite us</a>.</p>
+    <blockquote class="wp-block-quote"><p>The copyright law of the United States (<a href="https://www.copyright.gov/title17/">Title 17 United States Code) </a>governs the making of reproductions of copyrighted material. Under certain conditions specified in the law, libraries and archives are authorized to furnish a reproduction. One of these specified conditions is that the reproduction is not to be “used for any purpose other than private study, scholarship, or research.” If a researcher uses a reproduction for purposes in excess of “<a href="https://www.copyright.gov/fls/fl102.html">fair use</a>,” that researcher may be liable for copyright infringement.</p></blockquote>
+  {% endblock %}
+  {% block form %}
+  <form id="copyright-acknowledgement-form" method="get" action="{{ url }}" target="_blank">
+    {% if checkbox %}
+    <input name="copyright-acknowledgement" type="checkbox" value="agreed" required>
+    <label for="copyright-acknowledgement">I acknowledge the above statement about the fair use of these materials.</label>
+    {% endif %}
+    <button type="submit">Download</button>
+  </form>
+  {% endblock %}
+  </div>
+</div>
